@@ -1,0 +1,39 @@
+
+<app-add-department></app-add-department>
+<app-update-department></app-update-department>
+
+<div class="table-responsive "> 
+    <table class="table table-striped " >
+        <thead class="table-dark">
+            <tr>
+               
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+              
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of depts">
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+            
+                <!-- <td>
+                    <button class="btn btn-info" (click)="show(item.id)">Details</button>
+                </td> -->
+                <!-- <td>
+                    <button  class="btn btn-primary" (click)="getId(item)">Update</button>
+                </td> -->
+                <td>
+                    <button class="btn btn-danger" (click)="delete(item.id)">Delete</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="update(item.id)">Update</button>
+                </td>
+            </tr>
+           
+        </tbody>
+    </table>
+</div>

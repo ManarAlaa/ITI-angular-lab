@@ -1,0 +1,37 @@
+<p>newcomponent works!</p>
+
+<!-- One Way Data Binding -->
+<div>
+    <strong>{{firstName}}</strong>
+     <strong>{{lastName}}</strong>
+     (Interpolation Binding)
+</div>
+<div>
+    <span [innerHTML]='firstName'></span>     
+   ( Property Binding )          
+</div>
+
+
+<table border="2" style=" margin: 10px; padding: 5px; background-color: lightgoldenrodyellow;">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="num">
+                {{firstName}}
+        </td>
+    </tr>
+</table>
+
+    <h1 [style.color]="color">This is a Blue Heading</h1>
+    <button (click)="myFunction()">Show name</button>
+
+<!-- Two-way Data Binding -->
+
+<br> <br> 
+Enter the value  : 
+
+<input type="text" [(ngModel)] = 'val' />
+<br> 
+ Entered value is :  {{val}} 
